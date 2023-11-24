@@ -1,0 +1,15 @@
+<div class="mt-4">
+    <h2><%= item.name %></h2>
+    <div class="iframe_container">
+        <iframe
+            class="frame"
+            width="950"
+            height="600"
+            src="https://www.youtube.com/embed/<%= item.videoId %>"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+    </div>
+    <p><%= item.description %></p>
+</div>

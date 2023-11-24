@@ -1,0 +1,56 @@
+<nav class="header navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">Youtube</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="d-flex" action="/search/">
+            <input
+                class="form-control me-2 search-box"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                onchange="searchChange()"
+            />
+            <button class="btn btn-outline-success submit-button">Search</button>
+        </form>
+        <script>
+            function searchChange() {
+                const form = document.querySelector('.d-flex');
+                const searchBox = document.querySelector('.search-box');
+                form.action += searchBox.value;
+            }
+        </script>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        Các tính năng
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/video/create">Thêm Video</a>
+                        <a class="dropdown-item" href="/video/edit">Sửa Video</a>
+                        <a class="dropdown-item" href="/me/stored/news">Xóa Video </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
